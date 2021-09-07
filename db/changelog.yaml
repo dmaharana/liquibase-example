@@ -1,0 +1,40 @@
+databaseChangeLog:
+    - changeSet:
+        id: create_PRODUCT_table
+        author: deepak
+        changes:
+            - createTable:
+                tableName: PRODUCT
+                columns:
+                - column:
+                    name: product_id
+                    type: int
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                - column:
+                    name: category_id
+                    type: int
+                - column:
+                    name: title
+                    type: varchar(255)
+                - column:
+                    name: unit_price
+                    type: int
+                - column:
+                    name: active
+                    type: tinyint(2)
+    - changeSet:
+        id: add_fk_contraint_on_PRODUCT_CATEGORY
+        author: deepak
+        changes:
+            - addForeignKeyConstraint:
+                baseColumnNames:  category_id
+                baseTableName: PRODUCT
+                constraintName: fk_category_id
+                onDelete: CASCADE
+                onUpdate: RESTRICT
+                referencedColumnNames: category_id
+                referencedTableName: CATEGORY
+                validate: true

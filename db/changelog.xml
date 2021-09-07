@@ -1,0 +1,34 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="create_QUANTITY_table" author="deepak">
+        <createTable tableName="QUANTITY">
+            <column name="product_id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_product_id"/>
+            </column>
+            <column name="size" type="varchar(45)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="quantity" type="int">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create_CATEGORY_table" author="deepak">
+        <createTable tableName="CATEGORY">
+            <column name="category_id" type="int">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_category_id"/>
+            </column>
+            <column name="category_name" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="created" type="datetime">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
