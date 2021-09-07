@@ -76,3 +76,7 @@
 <br>
 <em>Author: Rajiv Gupta</em>
 <br>
+
+### MySQL JDBC driver link
+
+- https://dev.mysql.com/downloads/connector/j/
