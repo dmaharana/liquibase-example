@@ -64,11 +64,10 @@
   <em>liquibase history</em>
   <br>
 
-<br>
 - Release liquibase changelock. Incase the change was applied halfway, liquibase will hold lock, so the lock has to be manually released to proceed
-<br>
-<em>liquibase -changeLogFile=./db/changelog.sql releaseLocks</em>
-<br>
+  <br>
+  <em>liquibase -changeLogFile=./db/changelog.sql releaseLocks</em>
+  <br>
 
 ## Reference
 
